@@ -1,0 +1,103 @@
+.mainpage{
+    background-color: #F0F0F0;
+    .header{
+        border: 1px solid black;
+        height: 70px;
+        background-color: #242F42;
+        color: #ffffff;
+        div{
+            float: left;
+            height: 70px;
+            line-height: 60px;
+        }
+        .title{
+            margin-left: 42px;
+            font-size: 25px;
+            span{
+                margin-left: 12px;
+                cursor: pointer;
+            }
+        }
+        .useredit{
+            position: relative;
+            left: 1400px;
+            ul{
+                li{
+                    float: left;
+                    margin-left: 25px;
+                    img{
+                        border-radius: 50%;
+                        height: 60px;
+                        margin-top: 5px;
+                    }
+                    .el-dropdown-link{
+                        font-size: 18px;
+                        color: cornsilk;
+                    }
+                }
+            }
+        }
+    }
+    .part{
+        float: left;
+    }
+    .leftC{
+        .router-link-exact-active{
+            color: #ffd04b !important;
+        }
+        width:250px;
+        height: 800px;
+        .el-menu{
+            height: 865px;
+            .el-menu-item{
+            }
+        }
+        h3{
+            color: whitesmoke;
+            margin-top: 20px;
+            margin-left: 35px;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+    }
+    .rightC{
+        width: 1650px;
+        height: 865px;
+        .userinfo{
+            background-color: #BDCCD9;
+            height: 260px;
+            li{
+                height: 240px;
+                margin-right: 120px;
+                margin-left: 200px;
+                width: 500px;
+                div{
+                    float: left;
+                }
+                .info{
+                    position: relative;
+                    top: 40px;
+                    left: 100px;
+                    text-align: center;
+                    p{
+                        margin-top: 6px;
+                    }
+                }
+                img{
+                    border-radius: 50%;
+                    width: 120px;
+                    margin-left: 15px;
+                    margin-top: 15px;
+                }
+                span{
+                    margin-left: 20px;
+                }
+            }
+        }
+        .alledit{
+            margin-left: 200px;
+         }
+        
+    }
+    
+}

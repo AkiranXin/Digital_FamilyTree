@@ -1,0 +1,40 @@
+
+/*全局css   通用样式， 初始化样式代码*/
+@font-face {
+    font-family: 'iconfont';
+    /* project id 682850 */
+    src: url('//at.alicdn.com/t/font_682850_58yfbhz7jvf.eot');
+    src: url('//at.alicdn.com/t/font_682850_58yfbhz7jvf.eot?#iefix') format('embedded-opentype'),
+      url('//at.alicdn.com/t/font_682850_58yfbhz7jvf.woff') format('woff'),
+      url('//at.alicdn.com/t/font_682850_58yfbhz7jvf.ttf') format('truetype'),
+      url('//at.alicdn.com/t/font_682850_58yfbhz7jvf.svg#iconfont') format('svg');
+  }
+  
+  @font-face {
+    font-family: 'meituan';
+    src: url(//s0.meituan.net/bs/fe-web-meituan/c19c6e9/font/home-category-iconfont.eot?t=1503027869484);
+      src: url(//s0.meituan.net/bs/fe-web-meituan/c19c6e9/font/home-category-iconfont.eot?t=1503027869484#iefix) format('embedded-opentype'),
+      url(//s0.meituan.net/bs/fe-web-meituan/c19c6e9/font/home-category-iconfont.woff?t=1503027869484) format('woff'),
+      url(//s0.meituan.net/bs/fe-web-meituan/c19c6e9/font/home-category-iconfont.ttf?t=1503027869484) format('truetype'),
+      url(//s0.meituan.net/bs/fe-web-meituan/c19c6e9/font/home-category-iconfont.svg?t=1503027869484#home-category-iconfont) format('svg')
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.el-header,.el-main,.el-footer{
+    margin: 0 auto;
+    padding: 0 !important;
+    overflow: unset;
+    ::-webkit-scrollbar {display:none}
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: " ";
+}
+li{
+  list-style: none;
+}

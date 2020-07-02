@@ -1,0 +1,59 @@
+.login-page{
+    height:937px;
+    width: 1920px;
+    .pagewrap{
+        position: absolute;
+        width: 300px;
+        top: 210px;
+        left: 780px;
+        .regsiter-title{
+            position: relative;
+            left: 70px;
+            p{
+                font-size: 35px;
+            }
+            span{
+                position: relative;
+                left: 55px;
+                font-size: 14px;
+            }
+
+        }
+        .msgbox{
+            margin-top: 45px;
+            position: relative;
+            left:-100px
+        }
+    }
+    .line{
+        width: 440px;
+        position: relative;
+        left: -60px;
+    }
+    .el-input{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 400px;
+    }
+    .regis{
+        position: relative;
+        left: -20px;
+        span{
+            position: relative;
+            left: 220px;
+            cursor: pointer;
+        }
+        
+    }
+    button.loginbtn{
+        width: 400px;
+        margin-top: 30px;
+        position: relative;
+        left: -20px;
+    }
+    .foot{
+        margin-top: 150px;
+        margin-left: 40px;
+
+    }
+}
