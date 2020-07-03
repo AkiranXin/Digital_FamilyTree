@@ -58,7 +58,7 @@
           <span>综合管理</span>
         </template>
         <el-menu-item-group>
-          <router-link tag='el-menu-item' :to="{name:'searchMember'}">查询指定成员</router-link>
+          <router-link tag='el-menu-item' :to="{name:'searchMember'}">查询成员信息</router-link>
           <router-link tag='el-menu-item' :to="{name:'searchFamily'}">查询指定族谱</router-link>
           <router-link tag='el-menu-item' :to="{name:'searchRelation'}">查询成员亲属</router-link>
           <router-link tag='el-menu-item' :to="{name:'searchTree'}">查询族谱树形图</router-link>

@@ -4,23 +4,28 @@
       <el-divider></el-divider>
       <div class="addform">
         <el-form ref="form" :model="form" label-width="80px">
-        <el-form-item label="活动名称">
+        <el-form-item label="成员姓名">
           <el-input v-model="form.name"></el-input>
         </el-form-item>
-        <el-form-item label="活动名称">
-          <el-input v-model="form.name"></el-input>
+        <el-form-item label="成员id">
+          <el-input v-model="form.id"></el-input>
         </el-form-item>
-        <el-form-item label="活动名称">
-          <el-input v-model="form.name"></el-input>
+        <el-form-item label="性别">
+          <el-radio v-model="form.sex" label="男">男</el-radio>
+          <el-radio v-model="form.sex" label="女">女</el-radio>
         </el-form-item>
-        <el-form-item label="活动名称">
-          <el-input v-model="form.name"></el-input>
+        <el-form-item label="父亲名">
+          <el-input v-model="form.father"></el-input>
         </el-form-item>
-        <el-form-item label="活动名称">
-          <el-input v-model="form.name"></el-input>
+        <el-form-item label="出生日期">
+          <el-date-picker
+      v-model="form.birth"
+      type="date"
+      placeholder="选择日期">
+    </el-date-picker>
         </el-form-item>
-        <el-form-item label="活动名称">
-          <el-input v-model="form.name"></el-input>
+        <el-form-item label="个人简介">
+          <el-input v-model="form.intro"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="onSubmit">立即创建</el-button>
@@ -37,14 +42,26 @@ export default {
     return {
       form: {
         name: '',
-        region: '',
-        date1: '',
-        date2: '',
-        delivery: false,
-        type: [],
-        resource: '',
-        desc: ''
+        id: '',
+        sex: '',
+        father: '',
+        birth: '',
+        intro: ''
       }
+    }
+  },
+  methods: {
+    onSubmit () {
+      this.$confirm('确认添加吗？').then(() => {
+        this.$message({
+          type: 'success',
+          message: '添加成功!'
+        })
+        this.form.familyName = ''
+        this.form.familyX = ''
+        this.form.familySay = ''
+        this.form.familyIntro = ''
+      })
     }
   }
 }

@@ -3,31 +3,31 @@
       <i class="el-icon-delete"></i>删除家族
       <el-divider></el-divider>
             <div class="delform">
-        <el-form ref="form" :model="form" label-width="80px">
-        <el-form-item label="活动名称">
+        <el-form ref="form" :model="form" label-width="180px">
+        <el-form-item label="请输入待删除的族谱id：">
           <el-input v-model="form.name"></el-input>
         </el-form-item>
-        <el-form-item label="活动名称">
-          <el-input v-model="form.name"></el-input>
-        </el-form-item>
-        <el-form-item label="活动名称">
-          <el-input v-model="form.name"></el-input>
-        </el-form-item>
-        <el-form-item label="活动名称">
-          <el-input v-model="form.name"></el-input>
-        </el-form-item>
-        <el-form-item label="活动名称">
-          <el-input v-model="form.name"></el-input>
-        </el-form-item>
-        <el-form-item label="活动名称">
+        <el-form-item label="请输入待删除的族谱名：">
           <el-input v-model="form.name"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit">立即创建</el-button>
-          <el-button>取消</el-button>
+          <el-button type="primary" @click="delfamily">立即删除</el-button>
         </el-form-item>
         </el-form>
       </div>
+      <el-dialog title="以下是您将要删除的族谱信息，请确认是否删除！" :visible.sync="dialogFormVisible">
+        <ul class="delinfo">
+          <li>族谱id：123</li>
+          <li>族谱名：456</li>
+          <li>族谱姓氏：xx</li>
+          <li>家训：xxxxxxxxx</li>
+          <li>介绍：xxxxxxxxxxx</li>
+        </ul>
+        <div slot="footer" class="dialog-footer">
+          <el-button @click="dialogFormVisible = false">取 消</el-button>
+          <el-button type="primary" @click="confirmdel">删 除</el-button>
+        </div>
+      </el-dialog>
   </div>
 </template>
 
@@ -35,6 +35,9 @@
 export default {
   data () {
     return {
+      dialogFormVisible: false,
+      formLabelWidth: '80px',
+      familyid: '',
       form: {
         name: '',
         region: '',
@@ -45,6 +48,18 @@ export default {
         resource: '',
         desc: ''
       }
+    }
+  },
+  methods: {
+    delfamily () {
+      this.dialogFormVisible = true
+    },
+    confirmdel () {
+      this.dialogFormVisible = false
+      this.$message({
+        type: 'success',
+        message: '删除成功!'
+      })
     }
   }
 }
@@ -59,6 +74,11 @@ export default {
   }
   .delform{
     width: 400px;
+  }
+  .delinfo{
+     li{
+       margin-top: 10px;
+     }
   }
 }
 </style>

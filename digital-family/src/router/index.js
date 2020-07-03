@@ -10,10 +10,10 @@ import familyEdit from '@/components/mainpage/family/editfamily'
 import memberAdd from '@/components/mainpage/member/addmember'
 import memberDel from '@/components/mainpage/member/delmember'
 import memberEdit from '@/components/mainpage/member/editmember'
-import searchFamily from '@/components/mainpage/search/sertree'
-import searchMember from '@/components/mainpage/search/serrelation'
-import searchRelation from '@/components/mainpage/search/sermember'
-import searchTree from '@/components/mainpage/search/serfamily'
+import searchFamily from '@/components/mainpage/search/serfamily'
+import searchMember from '@/components/mainpage/search/sermember'
+import searchRelation from '@/components/mainpage/search/serrelation'
+import searchTree from '@/components/mainpage/search/sertree'
 
 Vue.use(Router)
 
