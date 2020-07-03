@@ -47,6 +47,7 @@ export default {
           type: 'success',
           message: '添加成功!'
         })
+        this.form.familyid = ''
         this.form.familyName = ''
         this.form.familyX = ''
         this.form.familySay = ''

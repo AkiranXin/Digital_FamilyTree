@@ -4,17 +4,14 @@
       <div class="title"><i class="el-icon-user"></i><router-link tag="span" :to="{name:'mainInfo'}">族谱管理系统</router-link></div>
       <div class="useredit">
         <ul class="clearfix">
-          <li><img src="../../assets/picture/老八.png" alt="" srcset=""></li>
+          <li><img src="../../assets/picture/link.jpg" alt="" srcset=""></li>
           <li>
            <el-dropdown>
         <span class="el-dropdown-link">
-          老八<i class="el-icon-arrow-down el-icon--right"></i>
+          admin<i class="el-icon-arrow-down el-icon--right"></i>
         </span>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>退出登陆</el-dropdown-item>
-              <el-dropdown-item>臭豆腐</el-dropdown-item>
-              <el-dropdown-item>腐乳</el-dropdown-item>
-              <el-dropdown-item>老八</el-dropdown-item>
+              <el-dropdown-item ><span @click="dellogin">退出登录</span></el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
       </li>
@@ -71,15 +68,15 @@
         <ul>
           <li class="user">
             <div>
-                <img src="../../assets/picture/老八.png" alt="">
+                <img src="../../assets/picture/link.jpg" alt="">
             </div>
             <div class="info">
                 <p>欢迎您</p>
                 <p>超级管理员</p>
-                <p>老八</p>
+                <p>admin</p>
             </div>
             <el-divider></el-divider>
-            <div class="qianzi">兄弟们干就完事了</div>
+            <div class="qianzi"><i class="el-icon-edit"></i><span>个性签名：</span>世上无难事，只怕有心人</div>
           </li>
         </ul>
       </div>
@@ -107,6 +104,15 @@ export default {
     },
     handleClose (key, keyPath) {
       console.log(key, keyPath)
+    },
+    dellogin () {
+      this.$confirm('确认退出当前账号吗？').then(() => {
+        this.$message({
+          type: 'success',
+          message: '退出成功!'
+        })
+        this.$router.push({name: 'login'})
+      })
     }
   }
 }
@@ -114,4 +120,7 @@ export default {
 
 <style lang='scss' scoped>
 @import "@/assets/css/mainpage.scss";
+.el-dropdown-link{
+  cursor: pointer;
+}
 </style>

@@ -5,10 +5,10 @@
       <div class="editform">
         <el-form ref="form" :model="form" label-width="180px">
         <el-form-item label="请输入待编辑的族谱id：">
-          <el-input v-model="form.name"></el-input>
+          <el-input v-model="editform.id"></el-input>
         </el-form-item>
         <el-form-item label="请输入待编辑的族谱名：">
-          <el-input v-model="form.name"></el-input>
+          <el-input v-model="editform.name"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="onSubmit">立即修改</el-button>
@@ -47,12 +47,16 @@ export default {
   data () {
     return {
       dialogFormVisible: false,
+      editform: {
+        id: '',
+        name: ''
+      },
       form: {
-        familyName: 'hhh',
-        familyX: 'hhh',
-        familySay: 'hhh',
-        familyIntro: 'hhh',
-        familyid: 'hhh'
+        familyName: '四川谭氏',
+        familyX: '谭',
+        familySay: '天行健，君子以自强不息',
+        familyIntro: '一个默默无闻的家族',
+        familyid: '0001'
       },
       formLabelWidth: '80px'
     }

@@ -57,10 +57,12 @@ export default {
           type: 'success',
           message: '添加成功!'
         })
-        this.form.familyName = ''
-        this.form.familyX = ''
-        this.form.familySay = ''
-        this.form.familyIntro = ''
+        this.form.name = ''
+        this.form.id = ''
+        this.form.sex = ''
+        this.form.father = ''
+        this.form.birth = ''
+        this.form.intro = ''
       })
     }
   }

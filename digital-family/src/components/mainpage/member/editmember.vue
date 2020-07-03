@@ -15,23 +15,22 @@
         </el-form-item>
         </el-form>
       </div>
-      <el-dialog title="编辑新的族谱信息" :visible.sync="dialogFormVisible">
+      <el-dialog title="编辑新的成员信息" :visible.sync="dialogFormVisible">
         <el-form :model="form">
-          <el-form-item label="族谱名" :label-width="formLabelWidth">
+          <el-form-item label="成员姓名" :label-width="formLabelWidth">
             <el-input v-model="form.name" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="族谱id" :label-width="formLabelWidth">
+          <el-form-item label="成员id" :label-width="formLabelWidth">
             <el-input v-model="form.id" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="族谱姓氏" :label-width="formLabelWidth">
+          <el-form-item label="成员性别" :label-width="formLabelWidth">
             <el-input v-model="form.sex" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="家训" :label-width="formLabelWidth">
+          <el-form-item label="成员父亲" :label-width="formLabelWidth">
             <el-input v-model="form.father" autocomplete="off"></el-input>
           </el-form-item>
-          <el-form-item label="族谱简介" :label-width="formLabelWidth">
-            <el-input v-model="form.birth" autocomplete="off" type="textarea"
-  :rows="5"></el-input>
+          <el-form-item label="成员生日" :label-width="formLabelWidth">
+            <el-input v-model="form.birth" autocomplete="off"></el-input>
           </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
@@ -53,7 +52,7 @@ export default {
         id: 'hhh',
         sex: 'hhh',
         father: 'hhh',
-        birth: 'hhh'
+        birth: '2020-5-14'
       }
     }
   },
