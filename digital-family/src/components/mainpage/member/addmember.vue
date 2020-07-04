@@ -14,6 +14,9 @@
           <el-radio v-model="form.sex" label="男">男</el-radio>
           <el-radio v-model="form.sex" label="女">女</el-radio>
         </el-form-item>
+        <el-form-item label="家族名">
+          <el-input v-model="form.family"></el-input>
+        </el-form-item>
         <el-form-item label="父亲名">
           <el-input v-model="form.father"></el-input>
         </el-form-item>
@@ -46,7 +49,8 @@ export default {
         sex: '',
         father: '',
         birth: '',
-        intro: ''
+        intro: '',
+        family: ''
       }
     }
   },
@@ -63,6 +67,7 @@ export default {
         this.form.father = ''
         this.form.birth = ''
         this.form.intro = ''
+        this.form.family = ''
       })
     }
   }

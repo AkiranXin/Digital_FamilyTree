@@ -5,10 +5,10 @@
       <div class="editform">
         <el-form ref="form" :model="form" label-width="180px">
         <el-form-item label="请输入待编辑的成员id：">
-          <el-input v-model="name"></el-input>
+          <el-input v-model="form.id"></el-input>
         </el-form-item>
         <el-form-item label="请输入待编辑的成员名：">
-          <el-input v-model="name"></el-input>
+          <el-input v-model="form.name"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="onSubmit">立即创建</el-button>
@@ -28,9 +28,15 @@
           </el-form-item>
           <el-form-item label="成员父亲" :label-width="formLabelWidth">
             <el-input v-model="form.father" autocomplete="off"></el-input>
+            <el-form-item label="成员家族" :label-width="formLabelWidth">
+            <el-input v-model="form.family" autocomplete="off"></el-input>
+          </el-form-item>
           </el-form-item>
           <el-form-item label="成员生日" :label-width="formLabelWidth">
             <el-input v-model="form.birth" autocomplete="off"></el-input>
+          </el-form-item>
+          <el-form-item label="成员简介" :label-width="formLabelWidth">
+            <el-input v-model="form.intro" autocomplete="off"></el-input>
           </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
@@ -48,11 +54,13 @@ export default {
       name: '',
       dialogFormVisible: false,
       form: {
-        name: 'hhh',
-        id: 'hhh',
-        sex: 'hhh',
-        father: 'hhh',
-        birth: '2020-5-14'
+        id: '000015',
+        name: '苏十五杰',
+        sex: '男',
+        father: '苏十四杰',
+        family: '西南苏家',
+        birth: '1999-02-01',
+        intro: '普普通通的普通人'
       }
     }
   },

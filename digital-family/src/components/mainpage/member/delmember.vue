@@ -5,7 +5,7 @@
         <div class="delform">
         <el-form ref="form" :model="form" label-width="180px">
         <el-form-item label="请输入待删除的成员id：">
-          <el-input v-model="form.name"></el-input>
+          <el-input v-model="form.id"></el-input>
         </el-form-item>
         <el-form-item label="请输入待删除的成员名：">
           <el-input v-model="form.name"></el-input>
@@ -17,12 +17,13 @@
       </div>
       <el-dialog title="以下是您将要删除的成员信息，请确认是否删除！" :visible.sync="dialogFormVisible">
         <ul class="delinfo">
-          <li>成员姓名：123</li>
-          <li>成员id：456</li>
-          <li>性别：xx</li>
-          <li>父亲姓名：xxx</li>
-          <li>出生日期：xxxxxxxxx</li>
-          <li>个人简介：xxxxxxxxxxx</li>
+          <li>成员姓名：{{delform.name}}</li>
+          <li>成员id：{{delform.id}}</li>
+          <li>性别：{{delform.sex}}</li>
+          <li>家族名称：{{delform.family}}</li>
+          <li>父亲姓名：{{delform.father}}</li>
+          <li>出生日期：{{delform.birth}}</li>
+          <li>个人简介：{{delform.intro}}</li>
         </ul>
         <div slot="footer" class="dialog-footer">
           <el-button @click="dialogFormVisible = false">取 消</el-button>
@@ -38,7 +39,17 @@ export default {
     return {
       dialogFormVisible: false,
       form: {
-        name: ''
+        name: '',
+        id: ''
+      },
+      delform: {
+        id: '000015',
+        name: '苏十五杰',
+        sex: '男',
+        father: '苏十四杰',
+        family: '西南苏家',
+        birth: '1999-02-01',
+        intro: '西南石油大学计算机科学学院学生'
       }
     }
   },

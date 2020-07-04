@@ -17,11 +17,11 @@
       </div>
       <el-dialog title="以下是您将要删除的族谱信息，请确认是否删除！" :visible.sync="dialogFormVisible">
         <ul class="delinfo">
-          <li>族谱id：0001</li>
-          <li>族谱名：四川谭氏</li>
-          <li>族谱姓氏：谭</li>
-          <li>家训：天行健，君子以自强不息</li>
-          <li>介绍：一个默默无闻的家族</li>
+          <li>族谱id：000003</li>
+          <li>族谱名：西南沈家</li>
+          <li>族谱姓氏：沈</li>
+          <li>家训：厚德载物</li>
+          <li>介绍：西南的沈氏家族</li>
         </ul>
         <div slot="footer" class="dialog-footer">
           <el-button @click="dialogFormVisible = false">取 消</el-button>

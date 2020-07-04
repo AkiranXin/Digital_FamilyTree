@@ -52,11 +52,11 @@ export default {
         name: ''
       },
       form: {
-        familyName: '四川谭氏',
+        familyName: '西南谭家',
         familyX: '谭',
-        familySay: '天行健，君子以自强不息',
-        familyIntro: '一个默默无闻的家族',
-        familyid: '0001'
+        familySay: '己所不欲，勿施于人',
+        familyIntro: '西南的谭氏家族',
+        familyid: '000002'
       },
       formLabelWidth: '80px'
     }
@@ -71,6 +71,8 @@ export default {
         type: 'success',
         message: '修改成功!'
       })
+      this.editform.name = ''
+      this.editform.id = ''
     }
   }
 }

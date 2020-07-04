@@ -13,8 +13,8 @@
           <el-button type="primary" @click="sermap">查看树形图</el-button>
         </el-form-item>
         </el-form>
-         <el-dialog title="成员查找结果" :visible.sync="dialogFormVisible">
-          <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick" default-expand-all></el-tree>
+         <el-dialog title="树形图绘制结果" :visible.sync="dialogFormVisible">
+          <img src="../../../assets/picture/tree.png" alt="">
           <div slot="footer" class="dialog-footer">
             <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
           </div>
@@ -31,45 +31,6 @@ export default {
       form: {
         name: '',
         id: ''
-      },
-      data: [{
-        label: '一级 1',
-        children: [{
-          label: '二级 1-1',
-          children: [{
-            label: '三级 1-1-1'
-          }]
-        }]
-      }, {
-        label: '一级 2',
-        children: [{
-          label: '二级 2-1',
-          children: [{
-            label: '三级 2-1-1'
-          }]
-        }, {
-          label: '二级 2-2',
-          children: [{
-            label: '三级 2-2-1'
-          }]
-        }]
-      }, {
-        label: '一级 3',
-        children: [{
-          label: '二级 3-1',
-          children: [{
-            label: '三级 3-1-1'
-          }]
-        }, {
-          label: '二级 3-2',
-          children: [{
-            label: '三级 3-2-1'
-          }]
-        }]
-      }],
-      defaultProps: {
-        children: 'children',
-        label: 'label'
       }
     }
   },
@@ -97,5 +58,8 @@ i{
   top: -180px;
   left: 600px;
   height: 250px;
+}
+img{
+  width: 930px;
 }
 </style>
